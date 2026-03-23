@@ -38,7 +38,7 @@ jobs:
     - name: Run failing tests (should fail)
       continue-on-error: true
       run: |
-        python -m pytest test_failing.py -v
+        python -m pytest bad_test_calculator.py -v
 
     - name: Run tests with coverage
       run: |
