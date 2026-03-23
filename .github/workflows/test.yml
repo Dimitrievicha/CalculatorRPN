@@ -33,13 +33,13 @@ jobs:
 
     - name: Run tests
       run: |
-        python -m pytest tests/test_calculator.py -v
+        python -m pytest test_calculator.py -v
 
     - name: Run failing tests (should fail)
       continue-on-error: true
       run: |
-        python -m pytest tests/test_failing.py -v
+        python -m pytest test_failing.py -v
 
     - name: Run tests with coverage
       run: |
-        python -m pytest tests/test_calculator.py --cov=calculator --cov-report=term-missing
+        python -m pytest test_calculator.py --cov=calculator --cov-report=term-missing
